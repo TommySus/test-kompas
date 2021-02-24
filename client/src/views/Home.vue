@@ -57,9 +57,17 @@ export default {
       if (formValues) {
         const namaJajan = formValues[0]
         const hargaJajan = Number(formValues[1])
+        const newDate = new Date()
+        const date = newDate.toISOString().slice(0, 10)
+        const hour = newDate.getHours()
+        const minute = newDate.getMinutes()
+        const second = newDate.getSeconds()
+
+        const clock = `${date} ${(hour < 10 ? '0' : '') + hour}:${(minute < 10 ? '0' : '') + minute}:${(second < 10 ? '0' : '') + second}`
         const payload = {
           name: namaJajan,
-          cost: hargaJajan
+          cost: hargaJajan,
+          created_at: clock
         }
         this.$store.dispatch('addData', payload)
           .then(({ data }) => {

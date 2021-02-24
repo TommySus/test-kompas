@@ -611,24 +611,6 @@
       "cost": 20000,
       "created_at": "2021-02-24 11:50:20",
       "id": 102
-    },
-    {
-      "name": "capcay kuah",
-      "cost": 50000,
-      "created_at": "2021-02-24 12:21:24",
-      "id": 103
-    },
-    {
-      "name": "soto ayam",
-      "cost": 20000,
-      "created_at": "2021-02-24 12:36:9",
-      "id": 104
-    },
-    {
-      "name": "soto tangkar",
-      "cost": 15000,
-      "created_at": "2021-02-24 12:48:33",
-      "id": 105
     }
   ]
 }
