@@ -27,17 +27,13 @@ export default new Vuex.Store({
         })
     },
     addData (context, payload) {
-      const newDate = new Date()
-      const date = newDate.toISOString().slice(0, 10)
-      const clock = `${date} ${newDate.getHours()}:${newDate.getMinutes()}:${newDate.getSeconds()}`
-
       return axios({
         method: 'POST',
         url: '/items',
         data: {
           name: payload.name,
           cost: payload.cost,
-          created_at: clock
+          created_at: payload.created_at
         }
       })
     }
